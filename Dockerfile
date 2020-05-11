@@ -20,8 +20,8 @@ COPY a-records.conf unbound.conf /opt/unbound/etc/unbound/
 
 ENTRYPOINT ["unbound", "-d"]
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-	CMD [ "drill", "-p", "5053", "nlnetlabs.nl", "@127.0.0.1" ]
+# HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+	# CMD [ "drill", "-p", "5053", "nlnetlabs.nl", "@127.0.0.1" ]
 
 RUN ["unbound", "-V"]
 
