@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.version "${BUILD_VERSION}"
 LABEL org.opencontainers.image.revision "${VCS_REF}"
 
 RUN apk update && \
-	apk add unbound ldns
+	apk add unbound ldns drill
 #RUN chown=nobody:nogroup /var/run/unbound /var/run/unbound
 
 #COPY a-records.conf unbound.conf /opt/unbound/etc/unbound/
