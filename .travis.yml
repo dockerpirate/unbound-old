@@ -5,7 +5,7 @@ env:
   global:
     - DOCKER_REPO=dockerpirate/unbound
     - ALPINE_M=3
-    - ALPINE_P=13
+    - ALPINE_P=12
     - UNBOUND_M=1.13.0
     - UNBOUND_P=r3
     - LDNS=1.7.1-r1
