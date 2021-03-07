@@ -1,8 +1,14 @@
-dist: xenial
-sudo: required
+language: ruby
+os: linux
+dist: focal
 env:
   global:
     - DOCKER_REPO=dockerpirate/unbound
+    - ALPINE_M=3
+    - ALPINE_P=13
+    - UNBOUND_M=1.13.0
+    - UNBOUND_P=r3
+    - LDNS=1.7.1-r1
 before_install:
   - curl -fsSL https://get.docker.com | sh
   - echo '{"experimental":"enabled"}' | sudo tee /etc/docker/daemon.json
